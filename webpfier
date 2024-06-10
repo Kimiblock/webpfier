@@ -1,8 +1,8 @@
 #!/bin/bash
 
 function main() {
-	cd $(dirname "$@")
-	baseName=$(basename "$@")
+	cd "$(dirname $@)"
+	baseName="$(basename $@)"
 	if [[ ${baseName} =~ ".jpg" ]]; then
 		conName=$(echo ${baseName} | sed 's|.jpg|.webp|g')
 	elif [[ ${baseName} =~ ".png" ]]; then

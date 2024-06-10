@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=WebP Converter
+Name=Convert to WebP
 Icon=webpfier
 Type=Application
 Exec=webpfier %U
