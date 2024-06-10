@@ -1,0 +1,16 @@
+#!/bin/bash
+
+function main() {
+	cd $(dirname "$@")
+	baseName=$(basename "$@")
+	if [[ ${baseName} =~ ".jpg" ]]; then
+		conName=$(echo ${baseName} | sed 's|.jpg|.webp|g')
+	elif [[ ${baseName} =~ ".png" ]]; then
+		conName=$(echo ${baseName} | sed 's|.jpg|.webp|g')
+	else
+		conName="${baseName}.webp"
+	fi
+	cwebp -q 83 "${baseName}" -o "${conName}"
+}
+
+main $@
