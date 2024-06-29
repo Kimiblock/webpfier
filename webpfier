@@ -13,6 +13,7 @@ function main() {
 		conName="${baseName}.webp"
 	fi
 	cwebp -q 83 "${baseName}" -o "${conName}"
+	rm "${baseName}"
 }
 
 main "$@"
