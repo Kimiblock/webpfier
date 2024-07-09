@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Convert to PNG
+Icon=webpfier
+Type=Application
+Exec=convertpng %U
+Keywords=Picture;Convert;PNG;
+MimeType=image/webp;
+Terminal=false
+Categories=Graphics;2DGraphics;RasterGraphics;
+StartupNotify=true

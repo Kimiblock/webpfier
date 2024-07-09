@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function main() {
+	cd $(dirname "$@")
+	baseName=$(basename "$@")
+	if [[ ${baseName} =~ ".webp" ]]; then
+		conName="$(echo ${baseName} | sed 's|.webp|.png|g')"
+	else
+		conName="${baseName}.png"
+	fi
+	magick "${baseName}" -quality 90 "${conName}"
+	rm "${baseName}"
+	killall wl-copy
+	wl-copy -o -f < "${conName}"
+}
+
+main "$@"
