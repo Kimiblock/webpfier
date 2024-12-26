@@ -8,3 +8,4 @@ MimeType=image/jpeg;image/png;image/gif;image/tiff;image/x-tga;image/vnd-ms.dds;
 Terminal=false
 Categories=Graphics;2DGraphics;RasterGraphics;
 StartupNotify=true
+NoDisplay=true
